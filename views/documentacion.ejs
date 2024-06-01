@@ -1,0 +1,1092 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentación de Endpoints de API</title>
+    <link rel="stylesheet" href="style.css">
+    
+    
+</head>
+<body>
+    <div class="container">
+        <h1>Documentación de Endpoints de API</h1>
+        <h2>Login Generar token</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Insertar Cliente con token</td>
+                    <td>Se permite insertar Cliente con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/Login</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>POST</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>null</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "cedula":10002255,<br>
+                            "password":"123"<br>
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>return res.status(200).json({ token,message:"usuario autorizado" });
+                        <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"Error al insertar el cliente"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"Error en el servidor" + error.message})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+ <h2>Insertar Cliente con tokenInsertar Cliente con token</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Insertar Cliente con tokenInsertar Cliente con token</td>
+                    <td>Se permite insertar Cliente con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/clientes/registrar</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>POST</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                          "cliNombre": "miguel gonzales",<br>
+                          "cliDireccion": "Cra 11 #-25-4",<br>
+                          "cliTelefono": "31645681",<br>
+                          "clicorreo": "carmelo@gmail.com"<br>
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"Cliente insertado correctamente"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"Error al insertar el cliente"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"Error en el servidor" + error.message})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h2>optenerCliente  con token</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>optenerCliente</td>
+                    <td>Se permite optenerCliente con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/clientes/listar</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>GET</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                          "clicDocumento": 1,",<br>
+                          "cliNombre": "kathe anacona",<br>
+                          "cliDireccion": "calle 15#21-14",<br>
+                          "cliTelefono": "3125478942",<br>
+                          "clicorreo": "kathe@gmail.com",<br>
+		                  "fk_usuarios": null",<br>
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"(respuesta)"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"Error al obtener los clientes"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"Error en el servidor"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>actualizarCliente con token</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>actualizarCliente</td>
+                    <td>Se permite actualizarCliente con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/clientes/actualizar/7</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>PUT</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "cliNombre": "juliana",<br>
+                            "cliDireccion": "Calle 12#-25",<br>
+                            "cliTelefono": "3114732824",<br>
+                            "clicorreo": "juliana@gmail.com"<br>
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"Cliente actualizado con éxito"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"Cliente no actualizado"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>eliminarCliente</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>eliminarCliente</td>
+                    <td>Se permite eliminarCliente con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/clientes/eliminar/3</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>DELETE</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin, usuarios</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "cliNombre": "miguel gonzales",<br>
+                            "cliDireccion": "Cra 11 #-25-4",<br>
+                            "cliTelefono": "31645681",<br>
+                            "clicorreo": "carmelo@gmail.com",<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"cliente eliminado correctamente"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"cliente no eliminado"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>registrarProducto</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>registrarProducto</td>
+                    <td>Se permite registrarProducto con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/productos/registrar</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>POST</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin, usuarios</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "proDescripcion": "vitaminaD",<br>
+                            "proValor": 2000,<br>
+                            "proCantidad": 21<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"producto insertado correctamente"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"producto no insertado"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>buscarProducto</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>buscarProducto</td>
+                    <td>Se permite buscarProducto con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/productos/buscarC/21</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>GET</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin, usuarios</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "proCodigo": 21,<br>
+		                    "proDescripcion": "biotina",<br>
+		                    "proValor": 2000,<br>
+		                    "proCantidad": 8<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"respuesta"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"no se encontro producto"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>actualizarProducto</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>buscarProducto</td>
+                    <td>Se permite actualizarProducto con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/productos/actualiza/1</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>PUT</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin, usuarios</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "proDescripcion": "taurina",<br>
+                            "proValor": 38500,<br>
+                            "proCantidad": 25,<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"producto Actualizado"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"error producto no actualizado"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>eliminarProducto</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>eliminarProducto</td>
+                    <td>Se permite eliminarProducto con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/productos/elimin/5</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>DELETE</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin, usuarios</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "proCodigo": 21,<br>
+		                    "proDescripcion": "biotina",<br>
+	                    	"proValor": 2000,<br>
+		                    "proCantidad": 8,<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"producto Eliminado"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"error producto no eliminado"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>registrarFactura</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>registrarFactura</td>
+                    <td>Se permite registrarFactura con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/factura/registFa</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>POST</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "facFecha": "2025-10-10",<br>
+                            "facCliente":3,<br>
+                            "facValorTotal": 4000,<br>
+                            "facVendedor": "3"<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"factura registrada"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"factura no registrada"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>actualizarFactura</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>actualizarFactura</td>
+                    <td>Se permite actualizarFactura con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/factura/factuFactura/3</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>PUT</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "facFecha": "2023-02-24",<br>
+                            "facCliente": 13,<br>
+                            "facValorTotal": 135000,<br>
+                            "facVendedor": "paula Gonzales"<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"actualizacion exitosa"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"error factura no actualizada"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+    
+        <h2>eliminarFactura</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>eliminarFactura</td>
+                    <td>Se permite eliminarFactura con token</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/factura/elimiFactura/29</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>DELETE</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "facFecha": "2023-02-24",<br>
+                            "facCliente": 13,<br>
+                            "facValorTotal": 135000,<br>
+                            "facVendedor": "paula Gonzales"<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json({mensaje:"factura eliminada"}) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"factura n eliminada"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>facturaDetalle</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>facturaDetalle</td>
+                    <td>permite Listar información de todas las facturas incluyendo 
+                        los productos, cliente, precios totales y unitarios</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/proDetalles/detallefa</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>GET</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            
+		                "factura_id": 20,<br>
+		                "fecha_factura": "2022-10-12T05:00:00.000Z",<br>
+		                "Documento_cliente": 15,<br>
+		                "Nombre_cliete": "julio rosero",<br>
+		                "Direccion_cliente": "Cra 14 #-25-4",<br>
+		                "Telefono_cliente": "312457112",<br>
+		                "correo_cliente": "julio@gmail.com",<br>
+		                "productos_nombre": "zauco",<br>
+		                "cantidad_facturadetalle": 6,<br>
+		                "vendedor_id": 1,<br>
+		                "vendedor_nombre": "A12042",<br>
+		                "precio_total_producto": 48000,<br>
+		                "factura_valor_total": 5000,<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json(respuesta) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"error al consultar"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>productosDetalles</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>productosDetalles</td>
+                    <td> permite una consulta detallada de los productos de la tienda naturista, 
+                        en dicha consulta se  presenta todos los datos del producto, 
+                        además de la cantidad disponible y las unidades vendidas.</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/proDetalles/detaPro</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>GET</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            "proCodigo": 1,<br>
+		                    "proDescripcion": "taurina",<br>
+		                    "proValor": 38500,<br>
+		                    "proCantidad": 25,<br>
+		                    "stock": 25,<br>
+		                    "unitsSold": "0",<br>
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json(respuesta) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"error productos detalles"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>productosMasV</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>productosMasV</td>
+                    <td> Permite listar los cinco productos más vendidos.</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/proMasCinco/cincoM</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>GET</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            {
+                                "proDescripcion": "sarzaparrila",<br>
+                                "cantidad_vendida": "21", <br>
+                            },
+                            {
+                                "proDescripcion": "zauco",<br>
+                                "cantidad_vendida": "16",<br>
+                            },
+                            {
+                                "proDescripcion": "biotina",<br>
+                                "cantidad_vendida": "8"<br>
+                            }
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json(respuesta) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"productos no encontrados"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>proMasVendidos</h2>
+
+
+
+        <br>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                  
+                    <th>nombre</th>
+                    <th>descripcion</th>
+                  
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>productosMasV</td>
+                    <td> Permite listar los productos más vendidos por vendedor.</td>
+                </tr>
+                <tr>
+                    <td>url</td>
+                    <td>http://localhost:3000/promasporvendedores/proMasven</td>
+                   
+                </tr>
+                <tr>
+                    <td>Verbo http</td>
+                    <td>GET</td>
+                   
+                </tr>
+                <tr>
+                    <td>heder</td>
+                    <td>token</td>
+                   
+                </tr>
+                <tr>
+                    <td>usuarios</td>
+                    <td>admin</td>
+                    
+                </tr>
+                <tr>
+                    <td>peticion Body</td>
+                    <td>
+                        {<br>
+                            {
+                                "venUsuario": 1,<br>
+                                "proDescripcion": "zauco",<br>
+                                "cantidad_vendida": "12"<br>
+                            },
+                            {
+                                "venUsuario": 3,<br>
+                                "proDescripcion": "zauco",<br>
+                                "cantidad_vendida": "4"<br>
+                            },
+                            {
+                                "venUsuario": 4,<br>
+                                "proDescripcion": "sarzaparrila",<br>
+                                "cantidad_vendida": "21"<br>
+                            },
+                            {
+                                "venUsuario": 4,<br>
+                                "proDescripcion": "biotina",<br>
+                                "cantidad_vendida": "8"<br>
+                            }
+                            
+                        }</td>
+                    
+                </tr>
+                <tr>
+                    <td>Respuesta json</td>
+                    <td>
+                     
+                        <p class="correcto"> correcto:</p>res.status(200).json(respuesta) <br/>
+                            <p class=" incorrecto">incorrecto:</p>res.status(400).json({mensaje:"error al consultar"})<br>
+                            <p class="error"> error:</p>res.status(500).json({mensaje:"'error en el servidor:' + error.message"})<br>
+                         
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+
+
+
+
+
+
+    </div>
+</body>
+</html>
